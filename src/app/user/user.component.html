@@ -2,24 +2,28 @@
 <div class="container">
     <form action="" class="search-form">
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search git users with user name" [(ngModel)]="username" name="username" (keyup)="findUser()">
+            <input type="text" class="form-control" placeholder="Search git users with username" [(ngModel)]="username" name="username" (keyup)="findUser()">
         </div>
     </form>
     <div *ngIf="user">
     <div class="panel-heading">
     {{user.name}} <small>({{user.login}})</small>
+    {{user.location}}
     </div>
     <div class="panel body">
     <div class="row">
-    <div class="col-sm-3">
+    <div class="col-md-6">
     <img src="{{user.avatar_url}}" class="img-circle img-responsive" alt="user Image">
     </div>
-    <div class="col-sm-5">
+    <div class="col-md-4">
         <ul class="list-group">
-                <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
-            <li class="list-group-item" *ngIf="profile.email"><a href="emailto:{{profile.email}}">{{profile.email}}</a></li>
-            <li class="list-group-item" *ngIf="profile.telephone">{{profile.telephone}}</li>
-            <li class="list-group-item" *ngIf="profile.hirelable">Available for hire</li>
+            <li class="list-group-item">Name: {{user.name}}</li>
+
+            <li class="list-group-item">Bio: {{user.bio}}</li>
+            <li class="list-group-item" *ngIf="user.hireable">Available for hire</li>
+            </li>
+            <li class="list-group-item">Email: <a href="emailto:>{{user.email}}">{{user.email}}</a></li>
+
         </ul>
     </div>
         <div class="col-sm-4">
