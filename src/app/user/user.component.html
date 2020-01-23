@@ -29,12 +29,13 @@
         <div class="col-sm-4">
             <div>
                 <p>
-                    <span class="badge badge-primary">{{profile.followers}} Followers</span><br>
-                    <span class="badge badge-primary">Following{{profile.followers}} </span><br>
-                    <span class="badge badge-success">{{profile.public_gists}} Public gists</span>
-                    <span class="badge badge-info">{{profile.public_repos}} Public public_repos</span>
+                    <span class="badge badge-primary">{{user.followers}}Followers</span>
+                    <span class="badge badge-secondary">{{user.following}}Following</span>
+                    <span class="badge badge-success">{{user.public_gists}}Public Gists</span>
+                    <span class="badge badge-info">{{user.public_repos}}Public Repos</span>
                 </p>
-                <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github</a></p>
+                <p><a href="{{user.html_url}}" target="-blank" class="btn btn-info btn-sm">view profile on
+                        Github</a></p>
               
         </div>
     </div>
